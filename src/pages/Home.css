@@ -1,0 +1,30 @@
+#header {
+    display: flex inline;
+    width: 100%;
+    height: 15vmin ;
+    padding: 1% 0;
+    align-items: center;
+    background: red;
+}
+
+#logo {
+    width: 40%;
+}
+
+#navPanel {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+#navPanel li a {
+    min-font-size: clamp(5px, 5vmin, 20px);
+    font-size: 5vh;
+    font-family: monospace;
+    color: black;
+}
+
+#content {
+    text-align: center;
+}
