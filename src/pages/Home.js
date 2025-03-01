@@ -11,9 +11,8 @@ function Home() {
 		return (
 				<BrowserRouter>
 						<div id="header">
-								<svg id="logo">
-										<Link to="/"></Link>
-								</svg>
+								<Link to="/" id="logo_container"><img src='resources/DART.jpeg' id="logo">
+								</img></Link>
 								<ul id="navPanel">
 										{
 												Object.keys(data).map((key, index) => (

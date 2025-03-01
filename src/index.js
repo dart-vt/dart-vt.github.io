@@ -4,6 +4,5 @@ import Home from "./pages/Home";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
-		<Home>
-		</Home>
+		<Home />
 )
