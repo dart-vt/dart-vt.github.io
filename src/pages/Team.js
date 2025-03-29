@@ -118,14 +118,14 @@ const operationsLeads = [
 const webTeam = [
   {
     name: "Justin Burns",
-    role: "Web Developer",
+    role: "Web Developer Lead / Systems Team",
     image: "images/JustinBurns.jpg",
     linkedin: "https://www.linkedin.com/in/justin-burns-465036291",
     email: "burnsje@vt.edu"
   },
   {
     name: "Samartha",
-    role: "Web Developer",
+    role: "Web Developer Lead / Systems Team",
     image: "images/SamarthaMadhyastha.jpg",
     linkedin: "https://www.linkedin.com/in/samartha-m03/",
     email: "samartha@vt.edu"
