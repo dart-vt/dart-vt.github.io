@@ -9,6 +9,9 @@
 # testing
 /tests
 
+# dev build output
+/build
+
 # media
 /data
 

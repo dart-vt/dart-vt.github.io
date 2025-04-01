@@ -1,8 +1,5 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
-
+name: Static Deployment Workflow
 on:
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -20,14 +17,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Make Directory
-        run: mkdir ./_site/
-      - name: Copy Files
-        run: cp -r ./build/* ./_site/
-      - name: Rename
-        run: mv ./_site/index.html ./_site/404.html
+        # Node setup
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        # Website compilation
+      - name: Build Files
+        run: |
+          npm install
+          npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./build
 
   # Deployment job
   deploy:
