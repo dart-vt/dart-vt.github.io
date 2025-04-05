@@ -1,0 +1,80 @@
+#header {
+    display: flex inline;
+    width: 100%;
+    height: 15vmin ;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    background: red;
+}
+
+#logo {
+    height: 100%;
+}
+
+#logo_container {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#navPanel {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+    visibility: hidden;
+}
+
+#navPanel li {
+    height: 100%;
+    align-content: center;
+}
+
+#navPanel li a {
+    font-size: clamp(20px, 2vw, 40px);
+    display: block;
+    font-family: monospace;
+    color: black;
+}
+/* MissionStrip.css */
+.mission-strip {
+    background-color: black;
+    color: white;
+    padding: 50px 20px;
+    text-align: left;
+  }
+  
+  .mission-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .mission-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .mission-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+@media (min-width: 768px) and (orientation: landscape) {
+    #navPanel {
+        visibility: visible;
+    }
+}
+
+
+
+#content {
+    text-align: center;
+}
