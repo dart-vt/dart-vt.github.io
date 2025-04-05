@@ -1,21 +1,18 @@
-.idea
-.vscode
+# IDES
+.idea/
+.vscode/
 
-# dependencies
+# Dependencies
 /node_modules
-/.pnp
-.pnp.js
 
-# testing
-/tests
-
-# dev build output
+# Production
 /build
 
-# media
-/data
+# Generated files
+.docusaurus
+.cache-loader
 
-# misc
+# Misc
 .DS_Store
 .env.local
 .env.development.local
