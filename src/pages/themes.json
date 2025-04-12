@@ -1,0 +1,12 @@
+{
+	"light": {
+		"overlay": "red",
+		"bg": "white",
+		"txt": "black"
+	},
+	"dark": {
+		"overlay": "green",
+		"bg": "black",
+		"txt": "white"
+	}
+}

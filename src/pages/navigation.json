@@ -1,8 +1,6 @@
 {
-	"Home": "/",
-	"Blog": "/blog",
-	"About": "/about",
-	"Team": "/team",
-	"What We Do": "/what-we-do"
-  }
-  
+	"about": "/about",
+	"what we do": "/what-we-do",
+	"team": "/team",
+	"blog": "/blog"
+}
