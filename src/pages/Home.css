@@ -1,3 +1,87 @@
+/*:root { 
+    --overlay: red;
+    --bg: white;
+    --txt: black;
+}
+
+#header {
+    display: flex inline;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: clamp(60px, 5rem, 120px) ;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    background: var(--overlay);
+}
+
+#hamburber {
+    position: absolute;
+    height: 70%;
+    margin: 0;
+    left: 3vw;
+}
+
+#logo {
+    padding: 0.5rem 0;
+    height: 4rem;
+}
+
+#logo_container {
+    position: absolute;
+    left: calc(50vw - (605 / 529) * 2rem);
+    height: 100%;
+    padding: 0;
+}
+
+#navPanel {
+    position: absolute;
+    display: none;
+    right: 0;
+    list-style-type: none;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+}
+
+#navPanel li {
+    height: 100%;
+    align-content: center;
+}
+
+#navPanel li a {
+    font-size: clamp(20px, 2vw, 40px);
+    display: block;
+    font-family: monospace;
+    color: var(--txt);
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+    #navPanel {
+        display: flex;
+    }
+
+    #logo_container {
+        left: 5vw;
+    }
+
+    #hamburber {
+        display: none;
+    }
+}
+
+
+#content {
+    text-align: center;
+    color: var(--txt);
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}*/
 :root {
     --overlay: none;
     --bg: none;
