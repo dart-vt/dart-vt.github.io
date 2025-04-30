@@ -1,12 +1,12 @@
 {
 	"light": {
-		"overlay": "red",
-		"bg": "white",
-		"txt": "black"
+		"overlay": "#b84c4c",
+		"bg": "#dedede",
+		"txt": "#1a1919"
 	},
 	"dark": {
-		"overlay": "green",
-		"bg": "black",
-		"txt": "white"
+		"overlay": "#3a5e27",
+		"bg": "#2b2b2b",
+		"txt": "#dedede"
 	}
 }
