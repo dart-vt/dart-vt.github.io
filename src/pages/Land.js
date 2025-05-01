@@ -1,16 +1,218 @@
-import React from "react";
-import "./Land.css";
-import heroVid from "../assets/IMG_9158.mp4"; // Use your own video or fallback image
-import circuitImg from "../assets/circuit.png";
+/*import React from "react";
+import './Land.css'
 
 export function Land() {
+		return (
+				<div id="Landing">
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+
+				</div>
+		)
+}*/
+/*import React from "react";
+import './Land.css'
+
+export function Land() {
+		return (
+				<div id="Landing">
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+						<h1>Landing</h1>
+
+				</div>
+		)
+}*/
+import React, { useState, useEffect } from "react";
+import "./Land.css";
+import heroVid from "../assets/IMG_9158.mp4";
+import circuitImg from "../assets/circuit.png";
+import teamPhoto from '../assets/team.jpg';
+
+
+// Media carousel items
+const mediaItems = [
+  { type: "video", src: heroVid },
+  { type: "image", src: "/images/IMG_9052 (1).png", alt: "Behind the scenes" },
+  { type: "image", src: "/images/IMG_8931.png", alt: "Pinhead Larry" },
+  { type: "image", src: "/images/IMG_9107.png", alt: "Storm Surge" },
+];
+
+// Carousel component
+function MediaCarousel() {
+  const [current, setCurrent] = useState(0);
+  const next = () => setCurrent((current + 1) % mediaItems.length);
+  const prev = () => setCurrent((current - 1 + mediaItems.length) % mediaItems.length);
+  const item = mediaItems[current];
+
   return (
-    <div id="Landing" style={{ backgroundImage: `url(${circuitImg})` }}>
+    <div className="carousel-container">
+      <button onClick={prev} className="arrow left">❮</button>
+      <div className="media-item">
+        {item.type === "video" ? (
+          <video controls className="media-video">
+            <source src={item.src} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          <img src={item.src} alt={item.alt} className="media-image" />
+        )}
+      </div>
+      <button onClick={next} className="arrow right">❯</button>
+    </div>
+  );
+}
+
+export function Land() {
+	useEffect(() => {
+		const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+		const theme = isDark ? 'dark' : 'light';
+	  
+		const themes = {
+		  light: {
+			'--overlay': '#b84c4c',
+			'--bg': '#dedede',
+			'--txt': '#1a1919',
+			'--icon-filter': 'none',
+			'--cta-color': '#cc0000',
+			'--cta-color-hover': '#e60000',
+		  },
+		  dark: {
+			'--overlay': '#3a5e27',
+			'--bg': '#2b2b2b',
+			'--txt': '#dedede',
+			'--icon-filter': 'invert(1)',
+			'--cta-color': '#00cc66',
+			'--cta-color-hover': '#00e676',
+		  },
+		};
+	  
+		const root = document.documentElement;
+		const selected = themes[theme];
+	  
+		for (const key in selected) {
+		  root.style.setProperty(key, selected[key]);
+		}
+	  }, []);
+	  
+
+  return (
+    //<div id="Landing" style={{ backgroundImage: `url(${circuitImg})` }}>
+	<div id="Landing">
+
       <div className="hero-text">
         <img src="/images/DART.svg" alt="DART Logo" className="hero-logo" />
         <h1>DART Robotics</h1>
         <p>Innovating through destruction – Virginia Tech’s Combat Robotics Team</p>
-        <a href="/team" className="cta-btn">Meet the Team</a>
       </div>
 
       <section className="about">
@@ -23,40 +225,46 @@ export function Land() {
       </section>
 
       <section className="projects">
-        <h2>What We Do</h2>
+        <h2>Robots</h2>
         <div className="project-grid">
           <div className="project-card">
             <img src="/images/stormsurge.png" alt="Storm Surge" />
             <h3>Storm Surge</h3>
-            <p>High-speed spinner designed for aggressive takedowns in VEX-style combat.</p>
           </div>
           <div className="project-card">
             <img src="/images/pinhead.png" alt="Pinhead Larry" />
             <h3>Pinhead Larry</h3>
-            <p>Robust flipper robot engineered for precision control and endurance battles.</p>
+			<a href="/robots" className="cta-btn">View Full Robot Page</a>
+          </div>
+		  <div className="project-card">
+            <img src="/images/eggbeater.png" alt="Pinhead Larry" />
+            <h3>Eggbeater</h3>
+          </div>
+          <div style={{ textAlign: "center", marginTop: "2rem" }}>
           </div>
         </div>
       </section>
 
       <section className="team-preview">
-        <h2>Meet the Team</h2>
+        <h2>Meet the Founders</h2>
         <div className="team-row">
-          <img src="/images/TrevorIerardi.png" alt="Trevor Ierardi" />
-          <img src="/images/NickCowen.png" alt="Nick Cowen" />
-          <img src="/images/JustinBurns.png" alt="Justin Burns" />
-        </div>
+  <div className="team-member">
+    <img src="/images/Trevor Ierardi.png" alt="Trevor Ierardi" />
+    <h3>Trevor Ierardi</h3>
+  </div>
+  <div className="team-member">
+    <img src="/images/Nick Cowen.png" alt="Nick Cowen" />
+    <h3>Nick Cowen</h3>
+  </div>
+</div>
+
+		<h2></h2>
         <a href="/team" className="cta-btn">Full Team Roster</a>
       </section>
 
       <section className="media">
         <h2>Gallery & Media</h2>
-        <div className="media-row">
-          <video controls className="media-video">
-            <source src={heroVid} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <img src="/images/buildphoto1.png" alt="Behind the scenes" />
-        </div>
+        <MediaCarousel />
       </section>
 
       <section className="news">
@@ -67,15 +275,40 @@ export function Land() {
         </ul>
       </section>
 
-      <section className="contact">
-        <h2>Contact & Links</h2>
-        <p>Email: <a href="mailto:dart@vt.edu">dart@vt.edu</a></p>
-        <div className="social-links">
-          <a href="https://github.com/dart-vt">GitHub</a>
-          <a href="https://instagram.com/dart.vt">Instagram</a>
-          <a href="/apply">Join Us</a>
-        </div>
-      </section>
+      <section
+  className="join-section"
+  style={{
+    backgroundImage: `url(${teamPhoto})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    padding: '5rem 2rem',
+    textAlign: 'center',
+    color: 'white',
+    position: 'relative',
+  }}
+>
+  <div style={{
+    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    padding: '2rem',
+    borderRadius: '8px',
+    maxWidth: '800px',
+    margin: '0 auto'
+  }}>
+    <h2>Want To Join Us?</h2>
+    <p>
+      DART Robotics is open to students from all majors interested in combat robotics — no experience required. Join us to learn, build, and compete.
+    </p>
+	<h2></h2>
+    <a href="mailto:tsierardi@vt.edu" className="cta-btn">
+      tsierardi@vt.edu
+    </a>
+  </div>
+</section>
+
+
+
     </div>
   );
 }
+
