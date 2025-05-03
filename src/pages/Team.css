@@ -1,100 +1,107 @@
-.team-links a {
-    color: white;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
+:root {
+  --txt: #1a1919;
+  --bg: #dedede;
+  --link-hover: #cc0000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --txt: #dedede;
+    --bg: #2b2b2b;
+    --link-hover: #00cc66;
   }
-  
-  .team-links a:hover {
-    color: #f44336;
-    transform: scale(1.2);
-    text-shadow: 0 0 8px #f44336;
-  }
-  .team-page {
-    padding: 2rem;
-    background-color: rgb(2, 99, 43); /* dark background */
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .team-title {
-    text-align: center;
-    font-size: 2rem;
-    margin: 2rem 0 1rem;
-    color: white;
-  }
-  
-  .team-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-  
-  .team-card {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    padding: 1rem;
-    width: 220px;
-    text-align: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    position: relative;
-    transition: transform 0.3s ease;
-  }
-  
-  .team-card:hover {
-    transform: translateY(-8px);
-  }
-  
-  .team-photo {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-    margin-bottom: 1rem;
-  }
-  
-  .team-info h3 {
-    margin: 0.3rem 0 0.2rem;
-    font-size: 1.1rem;
-    color: white;
-  }
-  
-  .team-info p {
-    font-size: 0.85rem;
-    color: #ccc;
-  }
-  
-  .team-links {
-    margin-top: 0.5rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .team-links i {
-    font-size: 1.2rem;
-    color: white;
-    transition: color 0.3s, transform 0.3s;
-  }
-  
-  .team-links i:hover {
-    color: #00acee; /* light blue */
-    transform: scale(1.2);
-  }
-  .cta-btn {
-    padding: 0.75rem 1.5rem;
-    background-color: #f44336;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background 0.3s;
-    display: inline-block;
-  }
-  
-  .cta-btn:hover {
-    background-color: #c62828;
-  }
-  
-  
+}
+
+.team-page {
+  padding: 2rem;
+  background-color: var(--bg);
+  color: var(--txt);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.team-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  color: var(--txt);
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.team-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 1rem;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: transform 0.3s ease;
+  color: var(--txt);
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+}
+
+.team-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.team-info h3 {
+  margin: 0.3rem 0 0.2rem;
+  font-size: 1.1rem;
+  color: var(--txt);
+}
+
+.team-info p {
+  font-size: 0.85rem;
+  color: var(--txt);
+}
+
+.team-links {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.team-links a,
+.team-links i {
+  font-size: 1.2rem;
+  color: var(--txt);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.team-links a:hover,
+.team-links i:hover {
+  color: var(--link-hover);
+  transform: scale(1.2);
+  text-shadow: 0 0 8px var(--link-hover);
+}
+
+.cta-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--link-hover);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+.cta-btn:hover {
+  background-color: var(--txt);
+  color: var(--bg);
+}

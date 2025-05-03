@@ -1,7 +1,7 @@
 .robots-page {
   padding: 2rem;
-  background-color: rgb(2, 99, 43);
-  color: white;
+  background-color: var(--bg);
+  color: var(--txt);
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -9,6 +9,7 @@
 .robots-title {
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  color: var(--txt);
 }
 
 .robots-grid {
@@ -42,14 +43,30 @@
 .robot-info h3 {
   margin: 0.5rem 0 0.2rem;
   font-size: 1.2rem;
+  color: var(--txt);
 }
 
 .robot-info em {
   font-size: 0.95rem;
-  color: #ccc;
+  color: #aaa; /* optional: make a variable if needed */
 }
 
 .robot-info p {
   font-size: 0.9rem;
-  color: #ddd;
+  color: #bbb;
+}
+.robot-info h3 {
+  margin: 0.5rem 0 0.2rem;
+  font-size: 1.2rem;
+  color: var(--txt);
+}
+
+.robot-info em {
+  font-size: 0.95rem;
+  color: var(--txt);
+}
+
+.robot-info p {
+  font-size: 0.9rem;
+  color: var(--txt); /* Theme toggle controlled */
 }

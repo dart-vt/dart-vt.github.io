@@ -1,12 +1,3 @@
-/*import React from "react";
-
-export function Team() {
-		return (
-				<div className="saw">
-						<h1>Team</h1>
-				</div>
-		)
-}*/
 import React from "react";
 import './Team.css';
 
@@ -235,10 +226,10 @@ export function Team() {
           </div>
         ))}
       </div>
-      <div style={{ textAlign: "center", marginTop: "2rem" }}>
-  <a href="/robots" className="cta-btn">View Robots</a>
-</div>
 
+      <div style={{ textAlign: "center", marginTop: "2rem" }}>
+        <a href="/robots" className="about-btn">View Robots</a>
+      </div>
     </div>
   );
 }
