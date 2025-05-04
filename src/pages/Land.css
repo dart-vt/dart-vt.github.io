@@ -341,3 +341,21 @@ section.land-intro p {
 .about-btn:hover, .cta-btn:hover {
   transform: scale(1.05);
 }
+/* initial off-screen for the images */
+.slide-in-left,
+.slide-in-right {
+  opacity: 0;
+  transform: translateX( var(--dir, 50px) );
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* override direction per class */
+.slide-in-left { --dir: -50px; }
+.slide-in-right { --dir: 50px; }
+
+/* when your observer adds .visible */
+.slide-in-left.visible,
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
