@@ -105,3 +105,45 @@
   background-color: var(--txt);
   color: var(--bg);
 }
+/* — Team Section Text — */
+.team-card h3 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.team-card .role {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.75rem;
+}
+
+.team-card p.bio {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+/* — Fade-in up for team cards — */
+@keyframes fadeInUpSlow {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.team-grid .team-card {
+  opacity: 0;
+  animation: fadeInUpSlow 0.7s ease-out forwards;
+}
+
+.team-grid .team-card:nth-child(odd)  { animation-delay: 0.3s; }
+.team-grid .team-card:nth-child(even) { animation-delay: 0.6s; }
+
+/* — Profile image scale on hover — */
+.team-card img {
+  transition: transform 0.3s ease;
+}
+
+.team-card img:hover {
+  transform: scale(1.1);
+}

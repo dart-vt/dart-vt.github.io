@@ -97,7 +97,10 @@ function Header({ currentTheme, toggleTheme }) {
     <div id="header">
       <img src='icons/menu.svg' id="hamburber" alt="menu" />
       <Link to="/" id="logo_container">
+      <a href="/" className="home-link">
         <img src='images/DART.svg' id="logo" alt="logo" />
+        </a>
+
       </Link>
       <nav id="navPanel">
         {Object.keys(data).map((key, index) => (

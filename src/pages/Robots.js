@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import "./Robots.css";
 import { Link } from "react-router-dom";
@@ -29,6 +29,8 @@ const robotList = [
 ];
 
 export function Robots() {
+  const listRef = useRef();
+
   return (
     <div className="robots-page">
       <h1 className="robots-title">Our Robots</h1>

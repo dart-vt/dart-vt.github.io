@@ -305,3 +305,39 @@
   height: 20rem;
   background-color: var(--bg-alt);
 }
+/* — Landing Page Text Styles — */
+section.land-intro h1 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+section.land-intro p {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+}
+/* — Section slide-in from left — */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.land-intro h1, .land-intro p {
+  opacity: 0;
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.land-intro p {
+  animation-delay: 0.5s;
+}
+
+/* — Button pop on hover — */
+.about-btn, .cta-btn {
+  transition: transform 0.2s ease;
+}
+.about-btn:hover, .cta-btn:hover {
+  transform: scale(1.05);
+}

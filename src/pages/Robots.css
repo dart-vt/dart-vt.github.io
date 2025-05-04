@@ -70,3 +70,49 @@
   font-size: 0.9rem;
   color: var(--txt); /* Theme toggle controlled */
 }
+/* — Robot Cards Typography — */
+.robot-card h3 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.robot-card .type {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: #666;
+}
+
+.robot-card p.description {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
+/* — Staggered card pop-in — */
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.robot-list .robot-card {
+  opacity: 0;
+  animation: popIn 0.6s ease-out forwards;
+}
+
+.robot-list .robot-card:nth-child(1) { animation-delay: 0.2s; }
+.robot-list .robot-card:nth-child(2) { animation-delay: 0.4s; }
+.robot-list .robot-card:nth-child(3) { animation-delay: 0.6s; }
+/* add more nth-child rules as needed */
+
+/* — Hover tilt & shadow — */
+.robot-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.robot-card:hover {
+  transform: translateY(-5px) rotate(-1deg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
