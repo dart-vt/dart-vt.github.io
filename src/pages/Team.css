@@ -1,16 +1,19 @@
 :root {
   --txt: #1a1919;
   --bg: #dedede;
-  --link-hover: #cc0000;
+  --link-hover: #cc0000; /* ✅ light mode red */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --txt: #dedede;
     --bg: #2b2b2b;
-    --link-hover: #00cc66;
+    --link-hover: #00cc66; /* ✅ dark mode green */
   }
 }
+
+
+
 
 .team-page {
   padding: 2rem;
@@ -76,11 +79,15 @@
   gap: 1rem;
 }
 
-.team-links a,
-.team-links i {
-  font-size: 1.2rem;
+.team-links a i {
   color: var(--txt);
   transition: color 0.3s, transform 0.3s;
+}
+
+.team-links a:hover i.fa-linkedin {
+  color: var(--link-hover);
+  transform: scale(1.2);
+  text-shadow: 0 0 8px var(--link-hover);
 }
 
 .team-links a:hover,
@@ -105,6 +112,7 @@
   background-color: var(--txt);
   color: var(--bg);
 }
+
 /* — Team Section Text — */
 .team-card h3 {
   font-family: 'Roboto Slab', serif;
@@ -125,6 +133,7 @@
   font-size: 0.95rem;
   line-height: 1.6;
 }
+
 /* — Fade-in up for team cards — */
 @keyframes fadeInUpSlow {
   from { opacity: 0; transform: translateY(30px); }

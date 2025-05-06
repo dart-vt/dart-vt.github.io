@@ -361,3 +361,22 @@ section.land-intro p {
   opacity: 1;
   transform: translateX(0);
 }
+/* — Project‐card slide animations — */
+.slide-up.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
+.slide-down.hidden {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
+
+/* When we add `.visible` they go to their natural spot */
+.slide-up.visible,
+.slide-down.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

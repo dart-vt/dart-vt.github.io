@@ -51,7 +51,7 @@ export function Land() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
-          // ABOUT section
+          // ABOUT section: toggle visible on scroll in/out
           if (entry.target === aboutTextRef.current) {
             if (entry.isIntersecting) {
               aboutTextRef.current.classList.add("visible");
@@ -59,11 +59,19 @@ export function Land() {
               aboutTextRef.current.classList.remove("visible");
             }
           }
-          // FOUNDERS section
+          // FOUNDERS section: slide all in/out with Trevor
           if (entry.target === trevorRef.current) {
-            const toggle = entry.isIntersecting ? 'add' : 'remove';
-            [trevorRef.current, nickRef.current, foundersLeftRef.current, foundersRightRef.current]
-              .forEach(el => el.classList[toggle]("visible"));
+            const action = entry.isIntersecting ? 'add' : 'remove';
+            [
+              trevorRef.current,
+              nickRef.current,
+              foundersLeftRef.current,
+              foundersRightRef.current
+            ].forEach(el => el.classList[action]("visible"));
+          }
+          // ROBOT cards: slide up/down on scroll in/out
+          if (entry.target.classList.contains("project-card")) {
+            entry.target.classList.toggle("visible", entry.isIntersecting);
           }
         });
       },
@@ -73,12 +81,29 @@ export function Land() {
       }
     );
 
-    if (aboutTextRef.current)     observer.observe(aboutTextRef.current);
-    if (trevorRef.current)        observer.observe(trevorRef.current);
+    // observe About section
+    if (aboutTextRef.current) {
+      observer.observe(aboutTextRef.current);
+    }
+    // observe Trevor for founders
+    if (trevorRef.current) {
+      observer.observe(trevorRef.current);
+    }
+    // set up and observe robot project cards
+    const cards = Array.from(document.querySelectorAll(".project-grid .project-card"));
+    cards.forEach((card, i) => {
+      // add initial hidden + direction classes
+      card.classList.add(
+        "hidden",
+        i === 1 ? "slide-down" : "slide-up"
+      );
+      observer.observe(card);
+    });
 
     return () => {
       if (aboutTextRef.current)     observer.unobserve(aboutTextRef.current);
       if (trevorRef.current)        observer.unobserve(trevorRef.current);
+      cards.forEach(card => observer.unobserve(card));
     };
   }, []);
 
@@ -150,8 +175,8 @@ export function Land() {
             </div>
             <div ref={foundersRightRef} className="founders-right-text hidden">
               <p>
-                Nick leads the mechanical team with a focus on design innovation
-                and battle-ready durability for our flagship robots.
+                Nick leads the mechanical team with a focus on design innovation and
+                battle-ready durability for our flagship robots.
               </p>
             </div>
           </div>

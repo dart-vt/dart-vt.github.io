@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './Team.css';
 
 const teamLeadership = [
@@ -125,6 +125,27 @@ const webTeam = [
 ];
 
 export function Team() {
+  useEffect(() => {
+    const root = document.documentElement;
+  
+    const applyTheme = (isDark) => {
+      root.style.setProperty('--link-hover', isDark ? '#00cc66' : '#cc0000');
+    };
+  
+    // Initial check
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(isDark);
+  
+    // Listen for theme changes
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (e) => applyTheme(e.matches);
+    mediaQuery.addEventListener('change', handleChange);
+  
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
+  }, []);
+
   return (
     <div className="team-page">
       <h1 className="team-title">Team Leadership</h1>
