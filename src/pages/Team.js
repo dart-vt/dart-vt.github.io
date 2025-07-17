@@ -33,28 +33,28 @@ const engineeringLeads = [
   {
     name: "TBA",
     role: "Pinhead Larry Lead / Flipper Lead / Full Body Spin Lead",
-    image: "images/TBA.png",
+    image: "images/QuestionMark.png",
     linkedin: "#",
     email: ""
   },
   {
     name: "TBD",
     role: "TBD Bot Lead (2 positions)",
-    image: "images/TBD.png",
+    image: "images/QuestionMark.png",
     linkedin: "#",
     email: ""
   },
   {
     name: "TBD in March",
     role: "Autonomous Lead",
-    image: "images/TBDinMarch.png",
+    image: "images/QuestionMark.png",
     linkedin: "#",
     email: ""
   },
   {
     name: "TBD",
     role: "Control Lead",
-    image: "images/TBD2.png",
+    image: "images/QuestionMark.png",
     linkedin: "#",
     email: ""
   }
@@ -82,28 +82,28 @@ const operationsLeads = [
   {
     name: "Britny Jiang",
     role: "Outreach Manager",
-    image: "images/BritnyJiang.png",
+    image: "images/QuestionMark.png",
     linkedin: "#",
     email: ""
   },
   {
     name: "Trevor Ierardi & VACANT",
     role: "MBSE Officer",
-    image: "images/TrevorAndVacant.png",
+    image: "images/QuestionMark.png",
     linkedin: "#",
     email: ""
   },
   {
     name: "VACANT",
     role: "Financial Officer",
-    image: "images/VACANT.png",
+    image: "images/QuestionMark.png",
     linkedin: "#",
     email: ""
   },
   {
     name: "TBD",
     role: "SharePoint Manager",
-    image: "images/TBD3.png",
+    image: "images/QuestionMark.png",
     linkedin: "#",
     email: ""
   }

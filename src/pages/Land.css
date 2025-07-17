@@ -380,3 +380,11 @@ section.land-intro p {
   transform: translateY(0);
 }
 
+/* Sponsors Section */
+.sponsor-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;      /* space between each logo */
+  margin-top: 1rem; /* optional: space above the logos */
+}

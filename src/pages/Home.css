@@ -315,3 +315,9 @@ nav a:hover::after {
   filter: invert(100%);
   transform: scale(1.2);
 }
+.sponsor-logo {
+  width: 250px;    /* or whatever max width you need */
+  height: auto;   /* preserves aspect ratio */
+  object-fit: contain;
+}
+

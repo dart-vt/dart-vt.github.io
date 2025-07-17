@@ -190,12 +190,19 @@ export function Land() {
       </section>
 
       <section className="news">
-        <h2>Updates & Highlights</h2>
-        <ul>
-          <li>🔧 April 2025: Competed at RoboGames in San Jose!</li>
-          <li>🎉 March 2025: Hosted VT’s first arena combat scrimmage.</li>
-        </ul>
+        
       </section>
+      <section className="sponsors section-colored">
+  <h2>Our Sponsors</h2>
+  <h4>
+    We are proudly supported by industry partners and local businesses who help make our robots possible.
+  </h4>
+  <div className="sponsor-logos">
+    <img src={"/icons/SponsorLogo.svg"} alt="Sponsor Logo" className="sponsor-logo" />
+    <img src={"/icons/SponsorLogo2.svg"} alt="Sponsor Logo2" className="sponsor-logo" />
+    {/* Add more sponsor logos here */}
+  </div>
+</section>
 
       <section
         className="join-section"

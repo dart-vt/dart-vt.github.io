@@ -8,7 +8,7 @@ const robotList = [
     name: "Storm Surge",
     type: "Spinner Bot",
     image: "/images/stormsurge.png",
-    description: "High-speed spinner designed for aggressive takedowns in VEX-style combat.",
+    description: "High-speed spinner designed for aggressive takedowns combat.",
     link: "/robots/storm-surge"
   },
   {
