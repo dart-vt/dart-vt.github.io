@@ -1,14 +1,79 @@
-.about-title {
-    font-family: 'Roboto Slab', serif;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
-  
-  .about-text {
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #444;
-  }
-  
+/* src/components/About.css */
+.about-title { 
+  font-family: 'Roboto Slab', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.about-text {
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin: 1rem auto;
+  transition: transform 0.3s ease;
+}
+
+.about-text::first-letter {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 0.1em;
+}
+
+.about-text:hover {
+  transform: translateY(-4px);
+}
+/* center the paragraph block but left‑align its text */
+.about-text {
+  max-width: 700px;        /* or whatever width you like */
+  margin: 1rem auto;
+  text-align: left;        /* <<< this lines up every first letter */
+  position: relative;
+  line-height: 1.6;
+  transition: transform 0.3s ease;
+}
+
+/* make the first letter an inline‑block and top‑align it */
+.about-text::first-letter {
+  display: inline-block;   /* <<< treat it as its own box */
+  vertical-align: top;     /* <<< line up every letter at the top */
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 0.1em;
+  line-height: 1;          /* keep its own height tight */
+}
+
+.about-text:hover {
+  transform: translateY(-4px);
+}
+/* About.css */
+
+.about-text {
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  /* ← use your theme text variable instead of #444 */
+  color: var(--txt);
+  margin: 1rem auto;
+  max-width: 700px;
+  text-align: left;
+  transition: transform 0.3s ease,
+              color 0.3s ease;  /* smooth color-flip in dark/light */
+}
+
+.about-text::first-letter {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-right: 0.1em;
+  line-height: 1;
+}
+
+.about-text:hover {
+  transform: translateY(-4px);
+}
+

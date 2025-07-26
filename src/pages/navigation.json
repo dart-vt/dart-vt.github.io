@@ -1,5 +1,5 @@
 {
-	"about": "/about",
-	"robots": "/robots",
-	"team": "/team"
+	"About": "/about",
+	"Robots": "/robots",
+	"Team": "/team"
 }

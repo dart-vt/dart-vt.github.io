@@ -321,3 +321,7 @@ nav a:hover::after {
   object-fit: contain;
 }
 
+/* ====== smooth scroll to top on route change ====== */
+html {
+  scroll-behavior: smooth;
+}

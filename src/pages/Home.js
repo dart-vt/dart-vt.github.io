@@ -68,6 +68,7 @@ function Home() {
 export default Home;*/
 import React from 'react';
 import { Route, Routes, Link, BrowserRouter } from 'react-router-dom';
+import ScrollToTop from "./ScrollToTop";
 import { About } from './About';
 import { Land } from './Land';
 import data from './navigation.json';
@@ -170,6 +171,8 @@ function Home() {
 
   return (
     <BrowserRouter>
+          <ScrollToTop />
+
       <Header currentTheme={currentTheme} toggleTheme={toggleTheme} />
       <div id='content'>
         <Routes>
