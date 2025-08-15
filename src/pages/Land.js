@@ -2,9 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Land.css";
 import heroVid from "../assets/IMG_9158.mp4";
 import teamPhoto from "../assets/team.jpg";
-import topImage from "../assets/IMG_8932.png";
+import topImage from "../assets/IMG_6262.png";
 import aboutImage from "../assets/IMG_9097.png";
 import { useTheme } from '../utils/useTheme'; // custom theme hook
+import { Link } from "react-router-dom";
+
 
 const mediaItems = [
   { type: "video", src: heroVid },
@@ -128,7 +130,7 @@ export function Land() {
             together mechanical, software, and electrical engineers from all
             disciplines.
           </p>
-          <a href="/about" className="about-btn">Learn More</a>
+          <Link to="/about" className="about-btn">Learn More</Link>
         </div>
       </section>
 
@@ -142,7 +144,7 @@ export function Land() {
           <div className="project-card">
             <img src="/images/pinhead.png" alt="Pinhead Larry" />
             <h3>Pinhead Larry</h3>
-            <a href="/robots" className="about-btn">View Full Robot Page</a>
+            <Link to="/robots" className="about-btn">View Full Robot Page</Link>
           </div>
           <div className="project-card">
             <img src="/images/eggbeater.png" alt="Eggbeater" />
@@ -159,7 +161,7 @@ export function Land() {
           <div className="founder-block">
             <div ref={foundersLeftRef} className="founders-left-text hidden">
               <p>
-                Trevor has been the operations lead since DART's inception,
+                Trevor was the operations lead since DART's inception,
                 driving logistics and strategy for all robot builds and competitions.
               </p>
             </div>
@@ -175,13 +177,13 @@ export function Land() {
             </div>
             <div ref={foundersRightRef} className="founders-right-text hidden">
               <p>
-                Nick leads the mechanical team with a focus on design innovation and
+                Nick leads the Darts Organization and mechanical team with a focus on design innovation and
                 battle-ready durability for our flagship robots.
               </p>
             </div>
           </div>
         </div>
-        <a href="/team" className="about-btn">Full Team Roster</a>
+        <Link to="/team" className="about-btn">Full Team Roster</Link>
       </section>
 
       <section className="media">
@@ -201,6 +203,12 @@ export function Land() {
     <img src={"/icons/SponsorLogo.svg"} alt="Sponsor Logo" className="sponsor-logo" />
     <img src={"/icons/SponsorLogo2.svg"} alt="Sponsor Logo2" className="sponsor-logo" />
     {/* Add more sponsor logos here */}
+  </div>
+  {/* New "See More" button */}
+  <div style={{ marginTop: "1.5rem", textAlign: "center" }}>
+    <Link to="/sponsors" className="about-btn">
+      See More
+    </Link>
   </div>
 </section>
 
@@ -231,8 +239,8 @@ export function Land() {
             combat robotics — no experience required. Join us to learn, build,
             and compete.
           </p>
-          <a href="mailto:tsierardi@vt.edu" className="about-btn">
-            tsierardi@vt.edu
+          <a href="mailto:DARTvtech@gmail.com" className="about-btn">
+            DARTvtech@gmail.com
           </a>
         </div>
       </section>

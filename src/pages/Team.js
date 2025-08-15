@@ -1,16 +1,18 @@
+//IMPORTANT Note: aspect ratio of pics: 1.06:1
+//https://imagy.app/image-aspect-ratio-changer/
 import React, { useEffect } from "react";
 import './Team.css';
 
 const teamLeadership = [
-  {
+  /*{
     name: "Trevor Ierardi",
     role: "Team Lead / Operations Lead / MBSE Officer / Campus Manager",
     image: "images/Trevor Ierardi.png",
     linkedin: "#",
-  },
+  },*/
   {
     name: "Nick Cowen",
-    role: "Vice Team Lead / Mechanical Lead",
+    role: "Team Lead / Operations Lead / Mechanical Lead",
     image: "images/Nick Cowen.png",
     linkedin: "#",
     email: ""
@@ -22,7 +24,7 @@ const engineeringLeads = [
     name: "Tiernan Bain",
     role: "Eggbeater Lead",
     image: "images/Tiernan Bain.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/tiernan-bain/",
   },
   {
     name: "Luke Hartman",
@@ -77,13 +79,13 @@ const operationsLeads = [
     name: "Louis Bagtas",
     role: "Community Manager / Campus Manager",
     image: "images/Eric Louis Bagtas.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/eric-louis-bagtas-47a576298/",
   },
   {
     name: "Britny Jiang",
     role: "Outreach Manager",
-    image: "images/QuestionMark.png",
-    linkedin: "#",
+    image: "images/Britny Jiang.jpeg",
+    linkedin: "https://www.linkedin.com/in/britny-jiang-a7894629a/",
     email: ""
   },
   {
@@ -118,6 +120,16 @@ const webTeam = [
   }
 ];
 
+// --- Alumni data ---
+const alumni = [
+  {
+    year: 2024,
+    columns: [
+      ["Trevor Ierardi"]
+    ]
+  }
+];
+
 export function Team() {
   useEffect(() => {
     const root = document.documentElement;
@@ -139,6 +151,10 @@ export function Team() {
       mediaQuery.removeEventListener('change', handleChange);
     };
   }, []);
+
+<div style={{ textAlign: "center", marginTop: "2rem" }}>
+  <a href="/robots" className="about-btn">View Robots</a>
+</div>
 
   return (
     <div className="team-page">
@@ -241,6 +257,27 @@ export function Team() {
           </div>
         ))}
       </div>
+<h1 className="team-title">Alumni</h1>
+{/* --- Alumni Section --- */}
+<section className="alumni-section">
+  {alumni.map(({ year, columns }) => (
+    <div className="alumni-year-block" key={year}>
+      <h2 className="alumni-year">{year}</h2>
+      <div className="alumni-columns">
+        {columns.map((list, idx) => (
+          <ul className="alumni-list" key={idx}>
+            {list.map((name) => (
+              <li key={name}>
+                <span className="dot" aria-hidden="true"></span>
+                <span className="name">{name}</span>
+              </li>
+            ))}
+          </ul>
+        ))}
+      </div>
+    </div>
+  ))}
+</section>
 
       <div style={{ textAlign: "center", marginTop: "2rem" }}>
         <a href="/robots" className="about-btn">View Robots</a>

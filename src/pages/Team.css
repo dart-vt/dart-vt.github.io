@@ -156,3 +156,83 @@
 .team-card img:hover {
   transform: scale(1.1);
 }
+/* ===== Alumni Section ===== */
+.alumni-section {
+  margin: 3rem auto 1rem;
+  max-width: 1200px;
+  color: var(--txt);
+}
+
+.alumni-year-block {
+  padding: 1.5rem 0 2.5rem;
+  border-top: 3px solid rgba(128, 0, 0, 0.35); /* thin maroon-ish line */
+}
+
+.alumni-year {
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  font-weight: 700;
+  color: #c2331a; /* warm red like screenshot header */
+  margin: 0 0 1rem 0.5rem;
+  letter-spacing: 1px;
+}
+
+.alumni-columns {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(160px, 1fr));
+  gap: 2.25rem 2rem;
+  align-items: start;
+}
+
+.alumni-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.alumni-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  line-height: 1.9;
+  font-size: 1.05rem;
+  color: var(--txt);
+}
+
+.alumni-list .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7c1f3a; /* deep maroon bullet like screenshot */
+  display: inline-block;
+  margin-top: 0.5rem;
+  flex: 0 0 6px;
+}
+
+.alumni-list .name {
+  white-space: nowrap;
+}
+
+/* Responsive tweaks to keep the same “feel” */
+@media (max-width: 1100px) {
+  .alumni-columns {
+    grid-template-columns: repeat(4, minmax(160px, 1fr));
+  }
+}
+@media (max-width: 900px) {
+  .alumni-columns {
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+  }
+}
+@media (max-width: 680px) {
+  .alumni-columns {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
+  .alumni-year {
+    margin-left: 0;
+  }
+}
+@media (max-width: 480px) {
+  .alumni-columns {
+    grid-template-columns: 1fr;
+  }
+}
