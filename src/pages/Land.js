@@ -103,9 +103,10 @@ export function Land() {
     });
 
     return () => {
-      if (aboutTextRef.current)     observer.unobserve(aboutTextRef.current);
-      if (trevorRef.current)        observer.unobserve(trevorRef.current);
-      cards.forEach(card => observer.unobserve(card));
+      // Removing unmount cleanup temporarily
+      // if (aboutTextRef.current)     observer.unobserve(aboutTextRef.current);
+      // if (trevorRef.current)        observer.unobserve(trevorRef.current);
+      // cards.forEach(card => observer.unobserve(card));
     };
   }, []);
 

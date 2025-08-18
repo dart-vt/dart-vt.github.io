@@ -117,6 +117,12 @@ const webTeam = [
     role: "Web Developer",
     image: "images/Justin Burns.jpg",
     linkedin: "https://www.linkedin.com/in/justin-burns-465036291",
+  },
+  {
+    name: "Samartha Madhyastha",
+    role: "DevOps Maintainer",
+    image: "images/Samartha Madhyastha.jpeg",
+    linkedin: "https://www.linkedin.com/in/Samartha-m03",
   }
 ];
 
